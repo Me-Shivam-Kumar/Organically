@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Organically</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="units">
+        <item> Kg</item>
+        <item>Ltr</item>
+        <item>gm</item>
+    </string-array>
+</resources>

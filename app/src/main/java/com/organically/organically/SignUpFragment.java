@@ -68,6 +68,7 @@ public class SignUpFragment extends Fragment {
     static int REQUESCODE=1;
     TextView  alreadyhaveanaccount;
     boolean picked,choosed;
+    LoadingDialog loadingDialog;
 
 
     public SignUpFragment() {
@@ -99,6 +100,7 @@ public class SignUpFragment extends Fragment {
             }
         });
 
+        loadingDialog=new LoadingDialog(getActivity());
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -227,7 +229,7 @@ public class SignUpFragment extends Fragment {
     private void checkInputs(){
         if(!TextUtils.isEmpty(nameSignUp.getText())){
             if(!TextUtils.isEmpty(aadharNumberSignUp.getText())){
-                if(!TextUtils.isEmpty(passwordSignUp.getText())&& passwordSignUp.length()>=6){
+                if(!TextUtils.isEmpty(passwordSignUp.getText())){
                     if(!TextUtils.isEmpty(confirmPasswordSignUp.getText())){
                         signUpBtn.setEnabled(true);
                         signUpBtn.setTextColor(getResources().getColor(R.color.white));
@@ -276,86 +278,99 @@ public class SignUpFragment extends Fragment {
         signUpBtn.setEnabled(false);
 
         if(choosed){
-            if(passwordSignUp.getText().toString().equals(confirmPasswordSignUp.getText().toString())){
-                if(userType.equals("Consumer")){
+            if(passwordSignUp.getText().toString().equals(confirmPasswordSignUp.getText().toString() )){
+                if( passwordSignUp.length()>=6){
+                    if(aadharNumberSignUp.length()==10){
+                        if(userType.equals("Consumer")){
 
-                    StorageReference mStorage= FirebaseStorage.getInstance().getReference("customersImage");
-                    StorageReference fileReference=mStorage.child(ProfileImageName);
-                    if(picked){
-                        fileReference.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            StorageReference mStorage= FirebaseStorage.getInstance().getReference("customersImage");
+                            StorageReference fileReference=mStorage.child(ProfileImageName);
+                            if(picked){
+                                fileReference.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                     @Override
-                                    public void onSuccess(Uri uri) {
-                                        newUserData.put("profilePic",String.valueOf(uri));
-                                        Toast.makeText(getContext(),"Photo Uploaded Succesfully",Toast.LENGTH_LONG).show();
-
-                                        dB.collection("Customers").document(aadharNumber).collection("CustomerProfile").add(newUserData).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                        fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                             @Override
-                                            public void onComplete(@NonNull Task<DocumentReference> task) {
-                                                Toast.makeText(getContext(),"Profile Created Successfully",Toast.LENGTH_LONG).show();
-                                                getFragmentManager().beginTransaction().replace(R.id.register_frame_layout,new SignInFragment()).commit();
+                                            public void onSuccess(Uri uri) {
+                                                newUserData.put("profilePic",String.valueOf(uri));
+                                                Toast.makeText(getContext(),"Photo Uploaded Succesfully",Toast.LENGTH_LONG).show();
+
+                                                dB.collection("Customers").document(aadharNumber).collection("CustomerProfile").add(newUserData).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<DocumentReference> task) {
+                                                        Toast.makeText(getContext(),"Profile Created Successfully",Toast.LENGTH_LONG).show();
+                                                        getFragmentManager().beginTransaction().replace(R.id.register_frame_layout,new SignInFragment()).commit();
+                                                    }
+                                                });
                                             }
                                         });
+
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getContext(),"Photo Uploaded UNSuccesfully",Toast.LENGTH_LONG).show();
+
                                     }
                                 });
-
                             }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(getContext(),"Photo Uploaded UNSuccesfully",Toast.LENGTH_LONG).show();
-
+                            else{
+                                Toast.makeText(getContext(),"Please pick an profile image",Toast.LENGTH_SHORT).show();
+                                signUpBtn.setEnabled(true);
                             }
-                        });
-                    }
-                    else{
-                        Toast.makeText(getContext(),"Please pick an profile image",Toast.LENGTH_SHORT).show();
-                        signUpBtn.setEnabled(true);
-                    }
 
-                }
-                else {
-                    StorageReference cStorage=FirebaseStorage.getInstance().getReference("farmerImage");
-                    StorageReference fileReference=cStorage.child(ProfileImageName);
-                    if(picked){
-                        fileReference.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        }
+                        else {
+                            StorageReference cStorage=FirebaseStorage.getInstance().getReference("farmerImage");
+                            StorageReference fileReference=cStorage.child(ProfileImageName);
+                            if(picked){
+                                fileReference.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                     @Override
-                                    public void onSuccess(Uri uri) {
-                                        newUserData.put("profilePic",String.valueOf(uri));
-                                        Toast.makeText(getContext(),"Photo Uploaded Succesfully",Toast.LENGTH_LONG).show();
-                                        dB.collection("Farmers_Producers").document(aadharNumber).collection("FarmerProducerProfile").document("profile").set(newUserData,SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                        fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                             @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if(task.isSuccessful()){
-                                                    getFragmentManager().beginTransaction().replace(R.id.register_frame_layout,new SignInFragment()).commit();
-                                                    Map<String,Object> ordersGotMap=new HashMap<>();
-                                                    dB.collection("Farmers_Producers").document(aadharNumber).collection("OrdersGot").add(ordersGotMap);
-                                                    Toast.makeText(getContext(),"Profile Created Successfully",Toast.LENGTH_LONG).show();
-                                                    Intent intent=new Intent(getContext(),RegisterActivity.class);
-                                                    startActivity(intent);
-                                                    getActivity().finish();
-                                                }
+                                            public void onSuccess(Uri uri) {
+                                                newUserData.put("profilePic",String.valueOf(uri));
+                                                Toast.makeText(getContext(),"Photo Uploaded Succesfully",Toast.LENGTH_LONG).show();
+                                                dB.collection("Farmers_Producers").document(aadharNumber).collection("FarmerProducerProfile").document("profile").set(newUserData,SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        if(task.isSuccessful()){
+                                                            getFragmentManager().beginTransaction().replace(R.id.register_frame_layout,new SignInFragment()).commit();
+                                                            Map<String,Object> ordersGotMap=new HashMap<>();
+                                                            dB.collection("Farmers_Producers").document(aadharNumber).collection("OrdersGot").add(ordersGotMap);
+                                                            Toast.makeText(getContext(),"Profile Created Successfully",Toast.LENGTH_LONG).show();
+                                                            Intent intent=new Intent(getContext(),RegisterActivity.class);
+                                                            startActivity(intent);
+                                                            getActivity().finish();
+                                                        }
 
+                                                    }
+                                                });
                                             }
                                         });
+
+
                                     }
                                 });
-
-
                             }
-                        });
-                    }
-                    else{
-                        Toast.makeText(getContext(),"Please pick an profile image",Toast.LENGTH_SHORT).show();
+                            else{
+                                Toast.makeText(getContext(),"Please pick an profile image",Toast.LENGTH_SHORT).show();
+                                signUpBtn.setEnabled(true);
+                            }
+
+                        }
+                    }else{
                         signUpBtn.setEnabled(true);
+                        Toast.makeText(getContext(),"Wrong Aadhar Card Number ",Toast.LENGTH_SHORT).show();
                     }
 
+                }else {
+                    signUpBtn.setEnabled(true);
+                    Toast.makeText(getContext(),"Password should be at least 6 character long ",Toast.LENGTH_SHORT).show();
                 }
+
+
             }
             else {
                 signUpBtn.setEnabled(true);

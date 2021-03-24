@@ -22,6 +22,8 @@
 
 :point_down: :point_down: :point_down: :point_down: :point_down:
 
+<hr>
+## About the app
 
 <hr>
 ## General Preview
@@ -75,6 +77,8 @@ You can:
 **2. Clone this repository :**
  
          gh repo clone Me-Shivam-Kumar/Organically
+         or
+         https://github.com/Me-Shivam-Kumar/Organically.git
          
 **3. Open Project in Android Studio
 

@@ -35,6 +35,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
@@ -293,6 +294,7 @@ public class SignUpFragment extends Fragment {
                                         dB.collection("Customers").document(aadharNumber).collection("CustomerProfile").add(newUserData).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                                             @Override
                                             public void onComplete(@NonNull Task<DocumentReference> task) {
+                                                Toast.makeText(getContext(),"Profile Created Successfully",Toast.LENGTH_LONG).show();
                                                 getFragmentManager().beginTransaction().replace(R.id.register_frame_layout,new SignInFragment()).commit();
                                             }
                                         });
@@ -331,7 +333,10 @@ public class SignUpFragment extends Fragment {
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if(task.isSuccessful()){
                                                     getFragmentManager().beginTransaction().replace(R.id.register_frame_layout,new SignInFragment()).commit();
-                                                    Intent intent=new Intent(getContext(),CustomerMainActivity.class);
+                                                    Map<String,Object> ordersGotMap=new HashMap<>();
+                                                    dB.collection("Farmers_Producers").document(aadharNumber).collection("OrdersGot").add(ordersGotMap);
+                                                    Toast.makeText(getContext(),"Profile Created Successfully",Toast.LENGTH_LONG).show();
+                                                    Intent intent=new Intent(getContext(),RegisterActivity.class);
                                                     startActivity(intent);
                                                     getActivity().finish();
                                                 }

@@ -35,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
                 SharedPreferences.Editor ed;
                 if(!sharedPrefs.getBoolean("initialized", false)){
                     ed=sharedPrefs.edit();
-                    ed.putBoolean("initialized", true);
+                    ed.putBoolean("initialized", false);
                     ed.apply();
                     SharedPreferences pref=getSharedPreferences("CustomerPref", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor=pref.edit();

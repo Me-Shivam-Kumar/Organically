@@ -60,19 +60,38 @@ public class OrdersFragment extends Fragment {
         dB=FirebaseFirestore.getInstance();
         CollectionReference ordersCollection=dB.collection("Farmers_Producers").document(aadharId).collection("OrdersGot");
        ordersCollection.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-           @Override
-           public void onComplete(@NonNull Task<QuerySnapshot> task) {
-               if(task.isSuccessful()){
-                   for(DocumentSnapshot snapshot:task.getResult()){
-                       ordersModelList.add(new OrdersModel(snapshot.getString("itemName"),snapshot.getString("qtyOrderdByCustomer"),snapshot.getString("duration"),snapshot.getString("status"),
-                               snapshot.getString("unit"),snapshot.getString("customerId"),snapshot.getString("pricePerUnitOffered")));
+                                                        @Override
+                                                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                            if (task.isSuccessful()) {
+                                                                for (DocumentSnapshot snapshot : task.getResult()) {
+                                                                    if (snapshot.getString("itemName") != null) {
+                                                                        if (snapshot.getString("qtyOrderdByCustomer") != null) {
+                                                                            if (snapshot.getString("duration") != null) {
+                                                                                if (snapshot.getString("status") != null) {
+                                                                                    if (snapshot.getString("unit") != null) {
+                                                                                        if (snapshot.getString("customerId") != null) {
+                                                                                            if (snapshot.getString("pricePerUnitOffered") != null) {
+                                                                                                ordersModelList.add(new OrdersModel(snapshot.getString("itemName"),snapshot.getString("qtyOrderdByCustomer"),snapshot.getString("duration"),snapshot.getString("status"),
+                                                                                                        snapshot.getString("unit"),snapshot.getString("customerId"),snapshot.getString("pricePerUnitOffered")));
+
+                                                                                            }
+
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+
+
                    }
 
                    OrdersAdapter adapter=new OrdersAdapter(ordersModelList);
                    ordersRecyclerView.setAdapter(adapter);
                    adapter.notifyDataSetChanged();
                }
-           }
+
        });
 
 

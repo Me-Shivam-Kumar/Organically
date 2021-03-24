@@ -198,6 +198,10 @@ public class FarmerHomeFragment extends Fragment {
                                 @Override
                                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                     if (task.isSuccessful()){
+                                        if(task.getResult().isEmpty()){
+                                            loadingDialog.hideDialog();
+                                            return;
+                                        }
                                         for(DocumentSnapshot snapshot:task.getResult()){
                                             noOfferingsTv.setVisibility(View.GONE);
                                             itemNameTv.setVisibility(View.VISIBLE);

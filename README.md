@@ -5,7 +5,7 @@
   <p align="center">
    Creating a friendly partnership between the farmer and the seekers of health.
     <br>
-     <img src="https://forthebadge.com/images/badges/built-for-android.svg" alt="droidconKE2020 built for Android">
+     <img src="" alt="droidconKE2020 built for Android">
     <br>
     </p>
 </p>

@@ -22,10 +22,16 @@
 
 :point_down: :point_down: :point_down: :point_down: :point_down:
 
-<hr>
+<hr> 
+
 ## About the app
 
+This app will create a friendly partnership with the farmer and the seekers of health. The greatest reason farmers switch to artificial means is the cost and difficulty in producing organically. And the solution is to let the fund and the farmers meet. 
+Our mobile app concept proposes – own a farmer scheme. The user can directly hire the farmer by viewing their profile or can place an order, and to which farmers bid. The farmer will be displayed based on the items he cultivates. 
+Promoting good health and wellbeing.
+
 <hr>
+
 ## General Preview
 
 

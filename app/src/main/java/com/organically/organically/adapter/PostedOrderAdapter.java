@@ -294,7 +294,7 @@ public class PostedOrderAdapter extends RecyclerView.Adapter<PostedOrderAdapter.
                                                 String endDateUpdated=endDateTV.getText().toString();
                                                 order.put("startDate",startDateUpdated);
                                                 order.put("endDate",endDateUpdated);
-                                                order.put("index",0);
+                                                order.put("index","0");
                                                 order.put("customerID",customerID);
                                                 orderDB.collection("Customers").document(customerID).collection("Orders").document(orderId).update(order).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override

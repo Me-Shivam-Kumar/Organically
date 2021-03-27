@@ -2,9 +2,6 @@ package com.organically.organically.model
 
 import java.io.Serializable
 
-/**
- * Created by Azhar Rivaldi on 03-10-2020
- */
 
 class ModelMain : Serializable {
     var timeNow: String? = null

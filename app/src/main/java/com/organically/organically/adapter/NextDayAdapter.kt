@@ -13,9 +13,7 @@ import com.organically.organically.model.ModelNextDay
 import kotlinx.android.synthetic.main.list_item_next_days.view.*
 import java.util.*
 
-/**
- * Created by Azhar Rivaldi on 07-10-2020
- */
+
 
 class NextDayAdapter(private val mContext: Context,
                      private val items: List<ModelNextDay>) : RecyclerView.Adapter<NextDayAdapter.ViewHolder>() {

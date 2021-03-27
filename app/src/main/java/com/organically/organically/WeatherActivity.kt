@@ -180,7 +180,7 @@ class WeatherActivity : AppCompatActivity(),LocationListener {
                                 tvWeather.text = "Clear sky"
                             } else if (strDescWeather == "scattered clouds") {
                                 iconTemp.setAnimation(R.raw.scattered_clouds)
-                                tvWeather.text = "Awan Tersebar"
+                                tvWeather.text = "Scattered Clouds"
                             } else {
                                 iconTemp.setAnimation(R.raw.unknown)
                                 tvWeather.text = strWeather

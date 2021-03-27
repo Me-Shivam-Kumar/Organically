@@ -1,8 +1,6 @@
 package com.organically.organically.networking
 
-/**
- * Created by Azhar Rivaldi on 03-10-2020
- */
+
 
 object ApiEndpoint {
     var BASEURL = "http://api.openweathermap.org/data/2.5/"

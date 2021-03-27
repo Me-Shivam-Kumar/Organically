@@ -2,9 +2,7 @@ package com.organically.organically.model
 
 import java.io.Serializable
 
-/**
- * Created by Azhar Rivaldi on 07-10-2020
- */
+
 
 class ModelNextDay : Serializable {
     var nameDay: String? = null

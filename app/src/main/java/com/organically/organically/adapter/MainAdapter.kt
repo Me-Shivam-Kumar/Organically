@@ -13,9 +13,7 @@ import com.organically.organically.model.ModelMain
 import kotlinx.android.synthetic.main.list_item_main.view.*
 import java.util.*
 
-/**
- * Created by Azhar Rivaldi on 03-10-2020
- */
+
 
 class MainAdapter(private val items: List<ModelMain>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 

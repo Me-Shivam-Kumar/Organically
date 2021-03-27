@@ -37,7 +37,7 @@ Promoting good health and wellbeing.
 
 #### Screenshots of the app
 
-<img src="https://github.com/Me-Shivam-Kumar/Organically/blob/master/app/src/main/res/drawable/github%20image.jpg" >
+<img src="https://github.com/Me-Shivam-Kumar/Organically/blob/master/app/src/main/res/drawable/github_image.jpg.jpg" >
 
 
 

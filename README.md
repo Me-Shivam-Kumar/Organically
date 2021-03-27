@@ -15,20 +15,90 @@
 ### Table of contents
 
 **1 [About the App](#about-the-app)**<br>
-**2 [General Preview](#general-preview)**<br>
-**3 [Technical](#technical)**<br>
-**4 [Versions](#versions)**<br>
+**2 [Features](#features)**<br>
+**3 [General Preview](#general-preview)**<br>
+**4 [Technical](#technical)**<br>
+**5 [Versions](#versions)**<br>
 
 
 :point_down: :point_down: :point_down: :point_down: :point_down:
 
 <hr> 
 
-## About the app
+## About the app 
 
 This app will create a friendly partnership with the farmer and the seekers of health. The greatest reason farmers switch to artificial means is the cost and difficulty in producing organically. And the solution is to let the fund and the farmers meet. 
+
+
 Our mobile app concept proposes – own a farmer scheme. The user can directly hire the farmer by viewing their profile or can place an order, and to which farmers bid. The farmer will be displayed based on the items he cultivates. 
 Promoting good health and wellbeing.
+
+<hr>
+
+## Features
+
+**Farmer Interface:**
+
+ADD NEW OFFERINGS -->
+
+			To ADD tap on "ADD NEW OFFERING"
+			Enter the deatails of the offerings
+			Then tap on "Add" to confirm 
+
+EDIT OR REMOVE YOUR OFFERINGS -->
+
+			To EDIT or REMOVE  tap on "VIEW ALL"
+			List of your offerings will appear
+			Tap on the three small dots icon 
+			Then tap on edit/remove option
+			Make the changes
+			Then tap on edit
+			The  changes will be saved and will be updated
+			
+
+
+FIND A ORDER AND BID FOR IT-->
+
+ 		  Farmers can search for orders placed by the consumers.
+		  To search for orders go to "FIND ORDERS"
+		  Then he can bid for the orders he want to take. 
+		  To bid ---> Go to "FIND ORDERS"
+		  List of orders placed by consumers will be displayed
+		  Find the order you want to bid on and tap "PLACE A BID"
+		  Then Fill in the details
+		  This bid then will be displayed to the consumer and if they liked it, they may hire them.
+
+TO EDIT YOUR BID -->
+
+			Tap on "MY BIDS" icon
+			All you bids will be displayed
+			Tap on "EDIT YOUR BID" to edit
+			Make the changes
+			Then tap on edit
+			The  changes will be saved and will be updated
+
+TO CHECK THE WEATHER FORECAST -->
+
+		  Tap on the "Weather" icon
+		  A layout will appear showing the weather conditions for one-one hour.
+		
+
+TO RENT A VEHICLE -->   
+
+      Tap on "Vehicle" icon
+			Go to  "Rent Vehicle" TAB
+			Type in the details
+			Then tap on "OPEN THIS VEHICLE FOR RENT" to confirm and put the vehicle on rent
+
+TO GET A VEHICLE ON RENT --> 
+
+       Tap on "Vehicle" icon
+			  Go to Rent "Find Rented Vehicles" TAB
+			  Find the type of vehicle you want
+			      ***************
+**Consumer Interface:**
+
+
 
 <hr>
 

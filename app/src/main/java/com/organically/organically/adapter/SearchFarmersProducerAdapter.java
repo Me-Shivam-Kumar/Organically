@@ -66,10 +66,18 @@ public class SearchFarmersProducerAdapter extends RecyclerView.Adapter<SearchFar
                 filteredList.addAll(allSearchFarmersProducersModelList);
             }else{
                 for(SearchFarmersProducersModel farmerorProducer: allSearchFarmersProducersModelList){
-                    if(farmerorProducer.getName().toLowerCase().contains(constraint.toString().toLowerCase()) || farmerorProducer.getOfferings().toLowerCase().contains(constraint.toString().toLowerCase()) ){
-                        filteredList.add(farmerorProducer);
+                    if(farmerorProducer.getAddress()!=null){
+                        if(farmerorProducer.getName().toLowerCase().contains(constraint.toString().toLowerCase()) || farmerorProducer.getOfferings().toLowerCase().contains(constraint.toString().toLowerCase()) ||farmerorProducer.getAddress().toLowerCase().contains(constraint.toString().toLowerCase()) ){
+                            filteredList.add(farmerorProducer);
 
+                        }
+                    }else{
+                        if(farmerorProducer.getName().toLowerCase().contains(constraint.toString().toLowerCase()) || farmerorProducer.getOfferings().toLowerCase().contains(constraint.toString().toLowerCase()) ){
+                            filteredList.add(farmerorProducer);
+
+                        }
                     }
+
 
                 }
             }

@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.adapter;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +31,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
+import com.organically.organically.LoadingDialog;
+import com.organically.organically.R;
+import com.organically.organically.model.OfferingsModel;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

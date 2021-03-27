@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.adapter;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -28,18 +28,17 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
+import com.organically.organically.OrderDetailsActivity;
+import com.organically.organically.R;
+import com.organically.organically.ViewBidsActivity;
+import com.organically.organically.model.PostedOrdersModel;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PostedOrderAdapter extends RecyclerView.Adapter<PostedOrderAdapter.viewHolder> implements Filterable {
     List<PostedOrdersModel> postedOrdersModelList;
@@ -338,7 +337,7 @@ public class PostedOrderAdapter extends RecyclerView.Adapter<PostedOrderAdapter.
                 viewOrderDetails.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(itemView.getContext(),OrderDetailsActivity.class);
+                        Intent intent = new Intent(itemView.getContext(), OrderDetailsActivity.class);
                         intent.putExtra("requestor","1");
                         intent.putExtra("customerId",customerID);
                         intent.putExtra("orderId",orderId);

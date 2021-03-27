@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.model;
 
 public class OfferingsModel {
     private String offeringName,offeringPricePerUnit,duration,totalQty,startDate,endDate,unit,farmerAadharCardNumber,customerAadharCardNumber;

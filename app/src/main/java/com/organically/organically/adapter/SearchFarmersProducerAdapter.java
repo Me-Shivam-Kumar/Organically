@@ -1,9 +1,6 @@
-package com.organically.organically;
+package com.organically.organically.adapter;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +13,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.organically.organically.FarmerProducerDetailsActivity;
+import com.organically.organically.R;
+import com.organically.organically.model.SearchFarmersProducersModel;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -108,7 +106,7 @@ public class SearchFarmersProducerAdapter extends RecyclerView.Adapter<SearchFar
             findFarmersProducersCL.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(),FarmerProducerDetailsActivity.class);
+                    Intent intent = new Intent(itemView.getContext(), FarmerProducerDetailsActivity.class);
                     intent.putExtra("aadharId",aadharNumText);
                     intent.putExtra("name",nameText);
                     intent.putExtra("profilePic",picLink);

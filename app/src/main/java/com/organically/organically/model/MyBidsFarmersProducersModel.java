@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.model;
 
 public class MyBidsFarmersProducersModel {
     private String orderTitle,orderItemName,orderQty,areaOrPincode,orderDuration,mybidPricePerUnit,mybidDescription,customerId,orderId;

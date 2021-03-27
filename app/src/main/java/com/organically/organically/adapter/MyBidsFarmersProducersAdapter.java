@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -19,8 +19,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
+import com.organically.organically.R;
+import com.organically.organically.model.MyBidsFarmersProducersModel;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.model;
 
 public class SearchFarmersProducersModel {
     private String name,address,offerings,pic,aadharNum;

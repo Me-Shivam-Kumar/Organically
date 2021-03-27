@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.model;
 
 public class ViewBidsModel {
     private String bidsproducerPricePerUnit,bidsDescription,farmerProducerId, orderId,itemName,qtyRequiredByCustomer,unit,duration;

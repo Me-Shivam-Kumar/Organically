@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,11 +17,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.organically.organically.R;
+import com.organically.organically.model.RentVehicleModelClass;
 
 import java.util.List;
 
 import static com.organically.organically.MyOpenToRentVehicle.refreshItemRentedVehicle;
-import static com.organically.organically.ViewAllOfferings.refreshItem;
 
 public class RentVehicleAdapter extends RecyclerView.Adapter<RentVehicleAdapter.ViewHolder> {
     List<RentVehicleModelClass> rentVehicleModelClassList;

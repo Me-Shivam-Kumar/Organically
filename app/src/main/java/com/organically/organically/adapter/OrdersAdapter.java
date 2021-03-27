@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.adapter;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.organically.organically.OrderDetailsActivity;
+import com.organically.organically.R;
+import com.organically.organically.model.OrdersModel;
 
 import java.util.List;
 
@@ -66,7 +70,7 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.viewHolder
             orderItemLayoutCL.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(itemView.getContext(),OrderDetailsActivity.class);
+                    Intent intent=new Intent(itemView.getContext(), OrderDetailsActivity.class);
                     intent.putExtra("itemName",item_name);
                     intent.putExtra("duration",durationPeriod);
                     intent.putExtra("qty",itemQty);

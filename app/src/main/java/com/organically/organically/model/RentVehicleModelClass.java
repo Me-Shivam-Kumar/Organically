@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.model;
 
 public class RentVehicleModelClass {
     String picLink,vehicleType,company,model,rent,farmerId,farmerName,requestor;

@@ -1,4 +1,4 @@
-package com.organically.organically;
+package com.organically.organically.model;
 
 public class PostedOrdersModel {
     private String title,itemName,qty,areaPincode,startDate,customer_id,order_id,endDate,qtyUnit;

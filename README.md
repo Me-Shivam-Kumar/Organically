@@ -59,14 +59,14 @@ EDIT OR REMOVE YOUR OFFERINGS -->
 
 FIND A ORDER AND BID FOR IT-->
 
- 		  Farmers can search for orders placed by the consumers.
-		  To search for orders go to "FIND ORDERS"
-		  Then he can bid for the orders he want to take. 
-		  To bid ---> Go to "FIND ORDERS"
-		  List of orders placed by consumers will be displayed
-		  Find the order you want to bid on and tap "PLACE A BID"
-		  Then Fill in the details
-		  This bid then will be displayed to the consumer and if they liked it, they may hire them.
+ 		  	Farmers can search for orders placed by the consumers.
+		  	To search for orders go to "FIND ORDERS"
+		  	Then he can bid for the orders he want to take. 
+		  	To bid ---> Go to "FIND ORDERS"
+		  	List of orders placed by consumers will be displayed
+		  	Find the order you want to bid on and tap "PLACE A BID"
+		  	Then Fill in the details
+		  	This bid then will be displayed to the consumer and if they liked it, they may hire them.
 
 TO EDIT YOUR BID -->
 
@@ -79,22 +79,22 @@ TO EDIT YOUR BID -->
 
 TO CHECK THE WEATHER FORECAST -->
 
-		  Tap on the "Weather" icon
-		  A layout will appear showing the weather conditions for one-one hour.
+		  	Tap on the "Weather" icon
+		  	A layout will appear showing the weather conditions for one-one hour.
 		
 
 TO RENT A VEHICLE -->   
 
-      Tap on "Vehicle" icon
+			Tap on "Vehicle" icon
 			Go to  "Rent Vehicle" TAB
 			Type in the details
 			Then tap on "OPEN THIS VEHICLE FOR RENT" to confirm and put the vehicle on rent
 
 TO GET A VEHICLE ON RENT --> 
 
-       Tap on "Vehicle" icon
-			  Go to Rent "Find Rented Vehicles" TAB
-			  Find the type of vehicle you want
+			Tap on "Vehicle" icon
+			Go to Rent "Find Rented Vehicles" TAB
+			Find the type of vehicle you want
 			      ***************
 **Consumer Interface:**
 

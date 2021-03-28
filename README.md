@@ -226,7 +226,7 @@ You can:
 For personal feedback or questions feel free to contact me via the mail address, which is mentioned on my [Github profile](link (https://github.com/Me-Shivam-Kumar).
 
 #### Developer
-* Linkedin: https://www.linkedin.com/in/shivam-kumar-06a4521a8/(Shivam Kumar)
+* Linkedin: https://www.linkedin.com/in/shivam-kumar-06a4521a8/ (Shivam Kumar)
             https://www.linkedin.com/in/bhuvan-chandra-joshi-1922a0208/ (Bhuvan Chandra Joshi)
 	    https://www.linkedin.com/in/kamal-kishore-joshi-43117a190/ (Kamal Joshi)
 	    

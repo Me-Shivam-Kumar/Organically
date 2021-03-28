@@ -41,62 +41,113 @@ Promoting good health and wellbeing.
 
 ADD NEW OFFERINGS -->
 
-			To ADD tap on "ADD NEW OFFERING"
-			Enter the deatails of the offerings
-			Then tap on "Add" to confirm 
+			To ADD tap on "ADD NEW OFFERING".
+			Enter the deatails of the offerings.
+			Then tap on "Add" to confirm.
 
 EDIT OR REMOVE YOUR OFFERINGS -->
 
-			To EDIT or REMOVE  tap on "VIEW ALL"
-			List of your offerings will appear
-			Tap on the three small dots icon 
-			Then tap on edit/remove option
-			Make the changes
-			Then tap on edit
-			The  changes will be saved and will be updated
+			To EDIT or REMOVE  tap on "VIEW ALL".
+			List of your offerings will appear.
+			Tap on the three small dots icon. 
+			Then tap on edit/remove option.
+			Make the changes.
+			Then tap on edit.
+			The  changes will be saved and will be updated.
 			
 
 
 FIND A ORDER AND BID FOR IT-->
 
  		  	Farmers can search for orders placed by the consumers.
-		  	To search for orders go to "FIND ORDERS"
+		  	To search for orders go to "FIND ORDERS".
 		  	Then he can bid for the orders he want to take. 
-		  	To bid ---> Go to "FIND ORDERS"
-		  	List of orders placed by consumers will be displayed
-		  	Find the order you want to bid on and tap "PLACE A BID"
-		  	Then Fill in the details
+		  	To bid ---> Go to "FIND ORDERS".
+		  	List of orders placed by consumers will be displayed.
+		  	Find the order you want to bid on and tap "PLACE A BID".
+		  	Then Fill in the details.
 		  	This bid then will be displayed to the consumer and if they liked it, they may hire them.
 
 TO EDIT YOUR BID -->
 
-			Tap on "MY BIDS" icon
-			All you bids will be displayed
-			Tap on "EDIT YOUR BID" to edit
-			Make the changes
-			Then tap on edit
-			The  changes will be saved and will be updated
+			Tap on "MY BIDS" icon.
+			All you bids will be displayed.
+			Tap on "EDIT YOUR BID" to edit.
+			Make the changes.
+			Then tap on edit.
+			The  changes will be saved and will be updated.
 
 TO CHECK THE WEATHER FORECAST -->
 
-		  	Tap on the "Weather" icon
+		  	Tap on the "Weather" icon.
 		  	A layout will appear showing the weather conditions for one-one hour.
 		
 
 TO RENT A VEHICLE -->   
 
-			Tap on "Vehicle" icon
-			Go to  "Rent Vehicle" TAB
-			Type in the details
-			Then tap on "OPEN THIS VEHICLE FOR RENT" to confirm and put the vehicle on rent
+			Tap on "Vehicle" icon.
+			Go to  "Rent Vehicle" TAB.
+			Type in the details.
+			Then tap on "OPEN THIS VEHICLE FOR RENT" to confirm and put the vehicle on rent.
 
 TO GET A VEHICLE ON RENT --> 
 
-			Tap on "Vehicle" icon
-			Go to Rent "Find Rented Vehicles" TAB
-			Find the type of vehicle you want
+			Tap on "Vehicle" icon.
+			Go to Rent "Find Rented Vehicles" TAB.
+			Find the type of vehicle you want.
 			      ***************
 **Consumer Interface:**
+
+
+TO MAKE AN ORDER -->   
+
+			Go to "Post New Order" tab.
+			Enter the details of the order.
+			Then tap on "POST ORDER" to make an order and put it up for bidding.
+
+TO EDIT AN ORDER -->	
+
+			Go to "MY ORDERS" tab.
+			Go to Open orders sub layout.
+			Then tap on "EDIT ORDER" and make changes.
+			Then tap "EDIT OREDER" to save the changes.
+
+To view bids and hire a farmer for you order -->
+			
+			Go to "MY ORDERS" tab.
+			Go to "Open" orders sub layout.
+			Then tap on "VIEW BIDS". 
+			Bids by various farmers will appear. 
+			Find the best bid according to you.
+			Then tap on "Hire" to hire that farmer.
+
+To Search Farmers and hire them directly -->
+				
+			Go to "Find Farmers or Producers" tab.
+			Search farmers by offering name or by area.
+			To view details about a farmer tap on the item view.
+			Search farmers by offering name or by area.
+			To view details about a farmer tap on the item view.
+			That Farmer's profile will open showing his offering and reviews on his work.
+			You can hire him directly by tapping on hire and then filling up the details of your orders.
+			Then tap on "Hire" to place the order.
+			Now this order will become active and will appear at "IN PROGRESS" tab.
+			
+To chech your active order details-->	
+
+			Go to "IN PROGRESS" tab.
+			List of your active orders will appear.
+			Tap on "view details".
+			Active order detail will appear.
+
+
+Editing your profile--> 
+
+			Go to "MY PROFILE" tab.
+			Tap on "Change address". 
+			Make changes.
+			Tap on save.
+			
 
 
 
@@ -175,7 +226,10 @@ You can:
 For personal feedback or questions feel free to contact me via the mail address, which is mentioned on my [Github profile](link (https://github.com/Me-Shivam-Kumar).
 
 #### Developer
-* Linkedin: https://www.linkedin.com/in/shivam-kumar-06a4521a8/
+* Linkedin: https://www.linkedin.com/in/shivam-kumar-06a4521a8/(Shivam Kumar)
+            https://www.linkedin.com/in/bhuvan-chandra-joshi-1922a0208/ (Bhuvan Chandra Joshi)
+	    https://www.linkedin.com/in/kamal-kishore-joshi-43117a190/ (Kamal Joshi)
+	    
 
 <hr>
 

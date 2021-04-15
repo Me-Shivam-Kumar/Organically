@@ -9,7 +9,8 @@
     <br>
     </p>
 </p>
-
+(Note:The api key for openweather is not included and is replaced by {API KEY} in ApiEndpoint.kt 
+also the google.json file is not included)
 <br>
 
 ### Table of contents
